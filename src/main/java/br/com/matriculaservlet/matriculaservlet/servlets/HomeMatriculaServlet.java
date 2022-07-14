@@ -1,4 +1,4 @@
-package br.com.matriculaservlet.matriculaservlet;
+package br.com.matriculaservlet.matriculaservlet.servlets;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
