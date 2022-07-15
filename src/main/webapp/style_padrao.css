@@ -19,13 +19,23 @@ body {
 }
 
 main{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    margin: 10em 0;
+    margin: 7em 0;
     padding: 5px 5px;
 }
+.main_div {
+    justify-content: left;
+    display: grid;
 
+}
+
+.botoes_link {
+    display: flex;
+    justify-content: space-between;
+    margin: 4em 0;
+}
 
 form {
     display: grid;
@@ -44,14 +54,14 @@ label {
     font-weight: bold;
 }
 
-input {
+form input {
     margin: 0.5em 12% 5%;
     width: 24em;
     text-align: center;
     font-size: 120%;
 }
 
-.botao_submeter {
+.botao_submeter, .links {
     border: 3px solid white;
     width: 20em;
     text-transform: capitalize;
@@ -64,7 +74,7 @@ input {
     cursor: pointer;
 }
 
-.botao_submeter:hover {
+.botao_submeter, .links:hover {
     background-color: white;
     color: #01310a;
 }
