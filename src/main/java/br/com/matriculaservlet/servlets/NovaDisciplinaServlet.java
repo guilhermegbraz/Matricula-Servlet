@@ -1,7 +1,7 @@
-package br.com.matriculaservlet.matriculaservlet.servlets;
+package br.com.matriculaservlet.servlets;
 
-import br.com.matriculaservlet.matriculaservlet.classes.BancoDisciplinas;
-import br.com.matriculaservlet.matriculaservlet.classes.Disciplina;
+import br.com.matriculaservlet.classes.BancoDisciplinas;
+import br.com.matriculaservlet.classes.Disciplina;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

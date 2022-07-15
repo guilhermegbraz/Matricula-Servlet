@@ -5,17 +5,38 @@ body {
     margin: 1px;
     font-size: 11px;
 }
-
-.cabecalho {
+.menu_lateral {
     display: flex;
+    flex-direction: column;
+    background-color: #02672e;
+    width: 30vw;
+    height: 100vh;
+    position: absolute;
+    left: -100vw;
+    transition: .25s;
+}
+
+.menu_lateral--ativo {
+    display: grid;
+    flex-direction: column;
+    left: 0;
+    transition: .25s;
+}
+.cabecalho {
+    display:grid;
     justify-content: center;
     align-items: center;
     background-color: #02672e;
     color: #fdd100;
-    font-size: 150%;
+    font-size: 130%;
     font-weight: bold;
     padding: 8px 16px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.menu_horizontal {
+    display: inline-block;
+    justify-content: space-between;
 }
 
 main{
@@ -37,7 +58,7 @@ main{
     margin: 4em 0;
 }
 
-form {
+form, ul {
     display: grid;
     justify-content: center;
     background-color: #01310a;

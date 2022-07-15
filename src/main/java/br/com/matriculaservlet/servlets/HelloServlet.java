@@ -1,4 +1,4 @@
-package br.com.matriculaservlet.matriculaservlet.servlets;
+package br.com.matriculaservlet.servlets;
 
 import java.io.*;
 import javax.servlet.http.*;

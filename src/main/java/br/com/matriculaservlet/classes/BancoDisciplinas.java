@@ -1,6 +1,5 @@
-package br.com.matriculaservlet.matriculaservlet.classes;
+package br.com.matriculaservlet.classes;
 
-import javax.print.attribute.UnmodifiableSetException;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
