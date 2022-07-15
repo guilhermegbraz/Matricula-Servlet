@@ -50,3 +50,21 @@ input {
     text-align: center;
     font-size: 120%;
 }
+
+.botao_submeter {
+    border: 3px solid white;
+    width: 20em;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 2em;
+    font-weight: bold;
+    background-color: transparent;
+    justify-self: center;
+    padding: 0.4em 1em;
+    cursor: pointer;
+}
+
+.botao_submeter:hover {
+    background-color: white;
+    color: #01310a;
+}

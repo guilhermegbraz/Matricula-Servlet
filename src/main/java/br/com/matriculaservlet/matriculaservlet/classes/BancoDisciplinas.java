@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class BancoDisciplinas {
 
-    private Set<Disciplina> disciplinas = new HashSet<>();
+    private static Set<Disciplina> disciplinas = new HashSet<>();
 
     public void adiciona(Disciplina disciplina) {
         this.disciplinas.add(disciplina);
