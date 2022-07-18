@@ -2,8 +2,11 @@ package br.com.matriculaservlet.classes;
 
 import java.util.Objects;
 
+
+
 public class Disciplina {
 
+    private Integer id;
     private String nome;
     private String TPI;
     private String professor;
@@ -11,6 +14,10 @@ public class Disciplina {
     public Disciplina(String nomeDisciplina, String TPI) {
         this.nome = nomeDisciplina;
         this.TPI = TPI;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public void setProfessor(String professor) {
@@ -29,13 +36,16 @@ public class Disciplina {
         return TPI;
     }
 
+    public Integer getId() {
+        return this.id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Disciplina)) return false;
         Disciplina curso = (Disciplina) o;
-        return this.nome.equals(curso.getNomeDisciplina()) && this.getTPI().equals(curso.getTPI())
-                && this.getProfessor().equals(curso.getProfessor());
+        return this.nome.equals(curso.getNomeDisciplina()) && this.getTPI().equals(curso.getTPI());
     }
 
     @Override
@@ -48,6 +58,8 @@ public class Disciplina {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getNomeDisciplina(), getTPI(), getProfessor());
+        return Objects.hash(getNomeDisciplina(), getTPI());
     }
+
+
 }

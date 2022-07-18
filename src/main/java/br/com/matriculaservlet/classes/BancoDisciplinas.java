@@ -7,16 +7,23 @@ import java.util.Set;
 public class BancoDisciplinas {
 
     private static Set<Disciplina> disciplinas = new HashSet<>();
+    private static Integer chaveCadastro = 1;
 
     public void adiciona(Disciplina disciplina) {
-        this.disciplinas.add(disciplina);
+        disciplina.setId(BancoDisciplinas.chaveCadastro);
+        BancoDisciplinas.disciplinas.add(disciplina);
+        BancoDisciplinas.chaveCadastro++;
     }
 
-    public void remove(Disciplina disciplina) {
-        this.disciplinas.remove(disciplina);
+    public void remove(Integer id) {
+        for (Disciplina disciplina : BancoDisciplinas.disciplinas) {
+            if(disciplina.getId().equals(id)) {
+                BancoDisciplinas.disciplinas.remove(disciplina);
+            }
+        }
     }
 
     public Set<Disciplina> getDisciplinas() {
-        return Collections.unmodifiableSet(this.disciplinas);
+        return Collections.unmodifiableSet(BancoDisciplinas.disciplinas);
     }
 }

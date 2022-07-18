@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.Set;
 
 @WebServlet(name = "DisciplinaCadastradaServlet", value = "/DisciplinaCadastradaServlet")
-public class DisciplinaCadastradaServlet extends HttpServlet {
+public class DisciplinasCadastradasServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

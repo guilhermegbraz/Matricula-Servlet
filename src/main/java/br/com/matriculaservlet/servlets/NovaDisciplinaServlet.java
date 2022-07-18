@@ -12,12 +12,14 @@ import java.io.IOException;
 public class NovaDisciplinaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("form_disciplina.html");
+        RequestDispatcher rd = request.getRequestDispatcher("form_disciplina.jsp");
         rd.forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         String nomeDisciplina = request.getParameter("nomeDisciplina");
         String TPIDisciplina = request.getParameter("TPIDisciplina");
         String professorDisciplina = request.getParameter("professorDisciplina");

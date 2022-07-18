@@ -13,7 +13,7 @@ public class HomeMatriculaServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher rd = req.getRequestDispatcher("/home.html");
+        RequestDispatcher rd = req.getRequestDispatcher("/home.jsp");
         rd.forward(req, resp);
     }
 }
