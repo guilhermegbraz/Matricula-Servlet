@@ -12,6 +12,7 @@
 <c:url value="/NovaDisciplinaServlet" var="linkNovaDisciplina"/>
 <c:url value="/DisciplinaCadastradaServlet" var="linkListarDisciplina"/>
 <c:url value="/RemoveDisciplinaServlet" var="linkRemoveDisciplina"/>
+<c:url value="/ExibeDisciplinaServlet" var="linkExibeDisciplina"/>
 
 <html>
 <head>
@@ -47,7 +48,13 @@
         <div class="main_div">
             <ul class="lista_disciplinas">
                 <c:forEach items="${ disciplinas }" var="disciplina">
-                    <li><h3>${ disciplina.nomeDisciplina }</h3> <a href="${linkRemoveDisciplina}?id=${disciplina.id}">remover</a> </li>
+                    <li>
+                        <h2>Disciplina: ${ disciplina.nomeDisciplina },
+                            TPI: ${disciplina.TPI},
+                            Professor: ${disciplina.professor}</h2>
+                        <a href="${linkRemoveDisciplina}?id=${disciplina.id}">remover</a>
+                        <a href="${linkExibeDisciplina}?id=${disciplina.id}">editar</a>
+                    </li>
                 </c:forEach>
             </ul>
         </div>

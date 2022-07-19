@@ -25,8 +25,7 @@ body {
 .cabecalho {
     background-color: #02672e;
     color: #fdd100;
-
-
+    padding-bottom: 2em;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
 }
 
@@ -54,6 +53,10 @@ main{
 .main_div {
     justify-content: left;
     display: grid;
+    background-color: #01310a;
+    padding: 2em 10em;
+    margin: 2.5% 2.5%;
+    border-radius: 3.5%;
 
 }
 
@@ -63,13 +66,21 @@ main{
     margin: 4em 0;
 }
 
-form, .lista_disciplinas {
+form {
     display: grid;
     justify-content: center;
     background-color: #01310a;
     padding: 2em 5em;
     margin: 2.5% 2.5%;
     border-radius: 3.5%;
+}
+
+h2 {
+    display: inline;
+    margin-right: 3.5em;
+}
+ul, li {
+    width: max-content;
 }
 
 form label {
@@ -102,6 +113,22 @@ form input {
 }
 
 .botao_submeter, .links:hover {
+    background-color: white;
+    color: #01310a;
+}
+
+.links {
+    border: 3px solid white;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 2em;
+    font-weight: bold;
+    background-color: transparent;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.links:hover {
     background-color: white;
     color: #01310a;
 }

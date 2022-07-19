@@ -14,6 +14,7 @@ public class Disciplina {
     public Disciplina(String nomeDisciplina, String TPI) {
         this.nome = nomeDisciplina;
         this.TPI = TPI;
+        this.professor = "sem preferência";
     }
 
     public void setId(Integer id) {
@@ -22,6 +23,14 @@ public class Disciplina {
 
     public void setProfessor(String professor) {
         this.professor = professor;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTPI(String TPI) {
+        this.TPI = TPI;
     }
 
     public String getNomeDisciplina() {

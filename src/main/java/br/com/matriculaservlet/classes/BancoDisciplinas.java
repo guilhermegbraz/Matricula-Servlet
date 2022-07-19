@@ -1,29 +1,27 @@
 package br.com.matriculaservlet.classes;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class BancoDisciplinas {
 
-    private static Set<Disciplina> disciplinas = new HashSet<>();
+    private static Map<Integer,Disciplina> disciplinas = new HashMap<>();
     private static Integer chaveCadastro = 1;
 
     public void adiciona(Disciplina disciplina) {
         disciplina.setId(BancoDisciplinas.chaveCadastro);
-        BancoDisciplinas.disciplinas.add(disciplina);
+        BancoDisciplinas.disciplinas.put(chaveCadastro, disciplina);
         BancoDisciplinas.chaveCadastro++;
     }
 
     public void remove(Integer id) {
-        for (Disciplina disciplina : BancoDisciplinas.disciplinas) {
-            if(disciplina.getId().equals(id)) {
-                BancoDisciplinas.disciplinas.remove(disciplina);
-            }
-        }
+        BancoDisciplinas.disciplinas.remove(id);
     }
 
-    public Set<Disciplina> getDisciplinas() {
-        return Collections.unmodifiableSet(BancoDisciplinas.disciplinas);
+    public Collection<Disciplina> getDisciplinas() {
+        return Collections.unmodifiableCollection(BancoDisciplinas.disciplinas.values());
+    }
+
+    public Disciplina getDisciplinaPeloId(Integer id) {
+        return BancoDisciplinas.disciplinas.get(id);
     }
 }

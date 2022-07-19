@@ -26,7 +26,7 @@ public class NovaDisciplinaServlet extends HttpServlet {
 
         Disciplina novaDisciplina = new Disciplina(nomeDisciplina, TPIDisciplina);
 
-        if (!(professorDisciplina.equals(null))) {
+        if (!(professorDisciplina == null)) {
             novaDisciplina.setProfessor(professorDisciplina);
         }
 
