@@ -1,4 +1,4 @@
-package br.com.matriculaservlet.classes;
+package br.com.matriculaservlet.modelo;
 
 import java.util.Objects;
 

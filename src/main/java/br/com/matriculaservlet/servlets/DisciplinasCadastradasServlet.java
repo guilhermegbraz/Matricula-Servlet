@@ -1,14 +1,13 @@
 package br.com.matriculaservlet.servlets;
 
-import br.com.matriculaservlet.classes.BancoDisciplinas;
-import br.com.matriculaservlet.classes.Disciplina;
+import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Disciplina;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Collection;
-import java.util.Set;
 
 @WebServlet(name = "DisciplinaCadastradaServlet", value = "/DisciplinaCadastradaServlet")
 public class DisciplinasCadastradasServlet extends HttpServlet {
