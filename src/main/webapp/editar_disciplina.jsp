@@ -21,7 +21,7 @@
     <nav class="menu_horizontal">
         <a href="${ linkUnicaEntrada }?acao=Home"><input class="links" type="button" value="home" ></a>
 
-        <a href="${ linkUnicaEntrada}?acao=NovaDisciplina">
+        <a href="/Matricula_Servlet/form_disciplina.jsp">
             <input class="links" type="button" value="Cadastrar nova disciplina" ></a>
 
         <a href="${ linkUnicaEntrada }?acao=ListarDisciplinas">
