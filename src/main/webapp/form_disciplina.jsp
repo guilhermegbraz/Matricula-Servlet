@@ -2,9 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<c:url value="/" var="linkHome"/>
-<c:url value="/NovaDisciplinaServlet" var="linkNovaDisciplina"/>
-<c:url value="/DisciplinaCadastradaServlet" var="linkListarDisciplina"/>
+
+<c:url value="/UnicaEntradaServlet" var="linkUnicaEntrada"/>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,19 +20,19 @@
     </div>
 
     <nav class="menu_horizontal">
-        <a href="${ linkHome }"><input class="links" type="button" value="home" ></a>
+        <a href="${ linkUnicaEntrada }?acao=Home"><input class="links" type="button" value="home" ></a>
 
-        <a href="${ linkNovaDisciplina}">
+        <a href="${ linkUnicaEntrada}?acao=NovaDisciplina">
             <input class="links" type="button" value="Cadastrar nova disciplina" ></a>
 
-        <a href="${ linkListarDisciplina }">
+        <a href="${ linkUnicaEntrada }?acao=ListarDisciplinas">
             <input class="links" type="button" value="Listar disciplinas" ></a>
 
     </nav>
 </header>
 
     <main>
-        <form action="${ linkNovaDisciplina }" method="post">
+        <form action="${ linkUnicaEntrada }" method="post">
             <label for="entrada_disciplina">Nome da disciplina:</label>
             <input type="text" name="nomeDisciplina" id="entrada_disciplina" required>
 
@@ -42,6 +41,8 @@
 
             <label for="entrada_professor">Nome do professor ofertando a disciplina (opcional):</label>
             <input type="text" name="professorDisciplina" id="entrada_professor" required>
+
+            <input type="text" name="acao" value="NovaDisciplina" hidden>
 
             <input type="submit" class="botao_submeter">
         </form>

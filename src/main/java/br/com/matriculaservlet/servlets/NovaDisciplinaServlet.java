@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "NovaDisciplinaServlet", value = "/NovaDisciplinaServlet")
+//@WebServlet(name = "NovaDisciplinaServlet", value = "/NovaDisciplinaServlet")
 public class NovaDisciplinaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

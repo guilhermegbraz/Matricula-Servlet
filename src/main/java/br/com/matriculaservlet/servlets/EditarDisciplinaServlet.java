@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "EditarDisciplinaServlet", value = "/EditarDisciplinaServlet")
+//@WebServlet(name = "EditarDisciplinaServlet", value = "/EditarDisciplinaServlet")
 public class EditarDisciplinaServlet extends HttpServlet {
 
     @Override
@@ -24,4 +24,5 @@ public class EditarDisciplinaServlet extends HttpServlet {
 
         response.sendRedirect("DisciplinaCadastradaServlet");
     }
+
 }

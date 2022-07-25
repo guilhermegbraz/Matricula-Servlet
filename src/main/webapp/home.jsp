@@ -1,9 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:url value="/" var="linkHome"/>
-<c:url value="/NovaDisciplinaServlet" var="linkNovaDisciplina"/>
-<c:url value="/DisciplinaCadastradaServlet" var="linkListarDisciplina"/>
+<c:url value="/UnicaEntradaServlet" var="linkUnicaEntrada"/>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,13 +33,13 @@
         </div>
 
         <nav class="menu_horizontal">
-            <a href="${ linkHome }"><input class="links" type="button" value="home" ></a>
+            <a href="${ linkUnicaEntrada }?acao=Home"><input class="links" type="button" value="home" ></a>
 
-                <a href="${ linkNovaDisciplina}">
-                    <input class="links" type="button" value="Cadastrar nova disciplina" ></a>
+            <a href="${ linkUnicaEntrada}?acao=NovaDisciplina">
+                <input class="links" type="button" value="Cadastrar nova disciplina" ></a>
 
-                <a href="${ linkListarDisciplina }">
-                    <input class="links" type="button" value="Listar disciplinas" ></a>
+            <a href="${ linkUnicaEntrada }?acao=ListarDisciplinas">
+                <input class="links" type="button" value="Listar disciplinas" ></a>
 
         </nav>
     </header>
