@@ -10,11 +10,11 @@ import java.io.IOException;
 
 public class EditarDisciplina implements Acao{
     @Override
-    public void executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Integer id = Integer.valueOf(req.getParameter("id"));
         req.setAttribute("disciplina", new BancoDisciplinas().getDisciplinaPeloId(id));
-        RequestDispatcher rd = req.getRequestDispatcher("editar_disciplina.jsp");
-        rd.forward(req, resp);
+        return "dispatcher:editar_disciplina.jsp";
+
     }
 }

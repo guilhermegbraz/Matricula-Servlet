@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class AlterarDisciplina implements Acao{
     @Override
-    public void executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         BancoDisciplinas bancoDisciplinas = new BancoDisciplinas();
         Disciplina disciplinaAModificar = bancoDisciplinas.getDisciplinaPeloId(
@@ -20,6 +20,6 @@ public class AlterarDisciplina implements Acao{
         disciplinaAModificar.setTPI(req.getParameter("TPIDisciplina"));
         disciplinaAModificar.setProfessor(req.getParameter("professorDisciplina"));
 
-        resp.sendRedirect("UnicaEntradaServlet?&acao=ListarDisciplinas");
+        return "redirect:UnicaEntradaServlet?&acao=ListarDisciplinas";
     }
 }

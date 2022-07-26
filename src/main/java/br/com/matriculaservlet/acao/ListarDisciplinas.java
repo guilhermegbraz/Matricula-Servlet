@@ -13,13 +13,13 @@ import java.util.Collection;
 public class ListarDisciplinas implements Acao {
 
     @Override
-    public void executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public String executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         BancoDisciplinas bd = new BancoDisciplinas();
         Collection<Disciplina> disciplinas = bd.getDisciplinas();
 
         req.setAttribute("disciplinas", disciplinas);
-        RequestDispatcher rd = req.getRequestDispatcher("lista_disciplinas.jsp");
-        rd.forward(req, resp);
+        return "dispatcher:lista_disciplinas.jsp";
+
     }
 }
