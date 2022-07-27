@@ -1,6 +1,6 @@
 package br.com.matriculaservlet.controller.acao;
 
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
 
 import javax.servlet.ServletException;
@@ -14,7 +14,7 @@ public class ListarDisciplinas implements Acao {
     @Override
     public String executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        BancoDisciplinas bd = new BancoDisciplinas();
+        Banco bd = new Banco();
         Collection<Disciplina> disciplinas = bd.getDisciplinas();
 
         req.setAttribute("disciplinas", disciplinas);

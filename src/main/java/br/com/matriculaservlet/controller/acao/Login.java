@@ -1,21 +1,24 @@
 package br.com.matriculaservlet.controller.acao;
 
 import br.com.matriculaservlet.modelo.Banco;
+import br.com.matriculaservlet.modelo.Usuario;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class RemoverDisciplina implements Acao {
-
+public class Login implements Acao{
     @Override
     public String executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String email = req.getParameter("email");
+        String senha = req.getParameter("senha");
 
         Banco banco = new Banco();
-        Integer idRemover = Integer.parseInt(req.getParameter("id"));
-        banco.removeDisciplina(idRemover);
-        return "redirect:UnicaEntradaServlet?&acao=ListarDisciplinas";
-
+        Usuario usuario = banco.existeUsuario(email, senha);
+        if (usuario == null) {
+            return "dispatcher:form_login.jsp";
+        }
+        return "dispatcher:home.jsp";
     }
 }

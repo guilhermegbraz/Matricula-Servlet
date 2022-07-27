@@ -1,11 +1,10 @@
 package br.com.matriculaservlet.servlets;
 
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 
 //@WebServlet(name = "NovaDisciplinaServlet", value = "/NovaDisciplinaServlet")
@@ -30,8 +29,8 @@ public class NovaDisciplinaServlet extends HttpServlet {
             novaDisciplina.setProfessor(professorDisciplina);
         }
 
-        BancoDisciplinas banco = new BancoDisciplinas();
-        banco.adiciona(novaDisciplina);
+        Banco banco = new Banco();
+        banco.adicionaDisciplina(novaDisciplina);
 
         System.out.println("Nova disciplina Cadastrada");
 

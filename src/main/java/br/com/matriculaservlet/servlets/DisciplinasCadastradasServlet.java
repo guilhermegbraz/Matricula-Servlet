@@ -1,11 +1,10 @@
 package br.com.matriculaservlet.servlets;
 
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Collection;
 
@@ -14,7 +13,7 @@ public class DisciplinasCadastradasServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        BancoDisciplinas bd = new BancoDisciplinas();
+        Banco bd = new Banco();
         Collection<Disciplina> disciplinas = bd.getDisciplinas();
 
         req.setAttribute("disciplinas", disciplinas);

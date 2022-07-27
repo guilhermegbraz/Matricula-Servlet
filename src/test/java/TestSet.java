@@ -1,4 +1,4 @@
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
 
 public class TestSet {
@@ -6,9 +6,9 @@ public class TestSet {
         Disciplina md = new Disciplina("Matematica Discreta", "4 - 0 - 5");
         Disciplina algelin = new Disciplina("Algebrar Linear", "6 - 0 - 8");
 
-        BancoDisciplinas bd = new BancoDisciplinas();
-        bd.adiciona(md);
-        bd.adiciona(algelin);
+        Banco bd = new Banco();
+        bd.adicionaDisciplina(md);
+        bd.adicionaDisciplina(algelin);
         System.out.println(bd.getDisciplinas());
     }
 }

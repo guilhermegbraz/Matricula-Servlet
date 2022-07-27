@@ -1,6 +1,6 @@
 package br.com.matriculaservlet.controller.acao;
 
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
 
 import javax.servlet.ServletException;
@@ -18,8 +18,8 @@ public class NovaDisciplina implements Acao{
 
         Disciplina novaDisciplina = new Disciplina(nomeDisciplina, TPIDisciplina);
 
-        BancoDisciplinas banco = new BancoDisciplinas();
-        banco.adiciona(novaDisciplina);
+        Banco banco = new Banco();
+        banco.adicionaDisciplina(novaDisciplina);
 
         System.out.println("Nova disciplina Cadastrada");
 

@@ -1,19 +1,18 @@
 package br.com.matriculaservlet.servlets;
 
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 
 //@WebServlet(name = "RemoveDisciplinaServlet", value = "/RemoveDisciplinaServlet")
 public class RemoveDisciplinaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        BancoDisciplinas banco = new BancoDisciplinas();
+        Banco banco = new Banco();
         Integer idRemover = Integer.parseInt(request.getParameter("id"));
-        banco.remove(idRemover);
+        banco.removeDisciplina(idRemover);
         response.sendRedirect("DisciplinaCadastradaServlet");
     }
 

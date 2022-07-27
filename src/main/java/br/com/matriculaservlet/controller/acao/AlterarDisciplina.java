@@ -1,6 +1,6 @@
 package br.com.matriculaservlet.controller.acao;
 
-import br.com.matriculaservlet.modelo.BancoDisciplinas;
+import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
 
 import javax.servlet.ServletException;
@@ -12,7 +12,7 @@ public class AlterarDisciplina implements Acao{
     @Override
     public String executa(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        BancoDisciplinas bancoDisciplinas = new BancoDisciplinas();
+        Banco bancoDisciplinas = new Banco();
         Disciplina disciplinaAModificar = bancoDisciplinas.getDisciplinaPeloId(
                 Integer.valueOf(req.getParameter("idDisciplina")));
 
