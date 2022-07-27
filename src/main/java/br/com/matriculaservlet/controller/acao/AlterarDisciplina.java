@@ -1,4 +1,4 @@
-package br.com.matriculaservlet.acao;
+package br.com.matriculaservlet.controller.acao;
 
 import br.com.matriculaservlet.modelo.BancoDisciplinas;
 import br.com.matriculaservlet.modelo.Disciplina;

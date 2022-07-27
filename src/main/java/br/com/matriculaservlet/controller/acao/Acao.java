@@ -1,4 +1,4 @@
-package br.com.matriculaservlet.acao;
+package br.com.matriculaservlet.controller.acao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

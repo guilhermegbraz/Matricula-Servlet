@@ -1,6 +1,7 @@
-package br.com.matriculaservlet.servlets;
+package br.com.matriculaservlet.controller;
 
-import br.com.matriculaservlet.acao.*;
+
+import br.com.matriculaservlet.controller.acao.Acao;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
