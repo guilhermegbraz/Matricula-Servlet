@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Matricula-Servlet" target="9" />
+      <module name="Matricula-Servlet" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
