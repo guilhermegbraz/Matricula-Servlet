@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="Matricula-Servlet-1.0-SNAPSHOT.war">
+    <root id="archive" name="Matriculas.war">
       <element id="artifact" artifact-name="Matricula-Servlet:war exploded" />
     </root>
   </artifact>

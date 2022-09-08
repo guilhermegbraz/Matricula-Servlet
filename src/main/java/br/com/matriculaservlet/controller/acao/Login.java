@@ -6,6 +6,7 @@ import br.com.matriculaservlet.modelo.Usuario;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class Login implements Acao{
@@ -19,6 +20,8 @@ public class Login implements Acao{
         if (usuario == null) {
             return "dispatcher:form_login.jsp";
         }
+        HttpSession secao = req.getSession();
+        secao.setAttribute("usuarioLogado", usuario);
         return "dispatcher:home.jsp";
     }
 }
