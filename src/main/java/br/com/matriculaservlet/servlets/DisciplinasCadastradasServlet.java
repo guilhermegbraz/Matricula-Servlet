@@ -2,13 +2,15 @@ package br.com.matriculaservlet.servlets;
 
 import br.com.matriculaservlet.modelo.Banco;
 import br.com.matriculaservlet.modelo.Disciplina;
+import com.google.gson.Gson;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.Collection;
 
-//@WebServlet(name = "DisciplinaCadastradaServlet", value = "/DisciplinaCadastradaServlet")
+@WebServlet(name = "DisciplinaCadastradaServlet", value = "/disciplinas")
 public class DisciplinasCadastradasServlet extends HttpServlet {
 
     @Override
@@ -16,9 +18,11 @@ public class DisciplinasCadastradasServlet extends HttpServlet {
         Banco bd = new Banco();
         Collection<Disciplina> disciplinas = bd.getDisciplinas();
 
-        req.setAttribute("disciplinas", disciplinas);
-        RequestDispatcher rd = req.getRequestDispatcher("lista_disciplinas.jsp");
-        rd.forward(req, resp);
+        Gson gson = new Gson();
+        String json = gson.toJson(disciplinas);
+
+        resp.setContentType("application/json");
+        resp.getWriter().println(json);
 
     }
 }
