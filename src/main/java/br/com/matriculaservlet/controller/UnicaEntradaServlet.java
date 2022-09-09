@@ -17,17 +17,8 @@ public class UnicaEntradaServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String paramAcao = req.getParameter("acao");
 
-        boolean acaoPermitidaSemLogin = paramAcao.equals("Login") || paramAcao.equals("LoginForm")
-                || paramAcao.equals("Home");
-        boolean usuarioNaoLogado = req.getSession().getAttribute("usuarioLogado") == null;
-
         String nomeDaClasse = "br.com.matriculaservlet.controller.acao." + paramAcao;
         String endereco = null;
-
-        if(!acaoPermitidaSemLogin && usuarioNaoLogado) {
-            resp.sendRedirect("UnicaEntradaServlet?&acao=LoginForm");
-            return;
-        }
 
         try{
 
